@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+$fonts_rubik: 'Rubik', sans-serif;
+$fonts_poppins: 'Poppins', sans-serif;
+$color_black: #08071b;
+$color_wight: #ffffff;
+
+$container_max_widthMax: 1283px;
+$container_max_widthMedium: 1120px;
+$container_max_widthPhone: 382px;
+$container_max_widthPhoneSmole: 343px;
+
+.Container {
+	max-width: $container_max_widthMax;
+	margin: 0 auto;
+}
+
+.App {
+	font-family: $fonts_poppins;
+	text-align: start;
+	color: $color_black;
+	font-size: 16px;
+}
+
+.header_block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	padding-top: 591px;
+	background: linear-gradient(to left, #ee5622, #f2906e, #f5c8b9, #ffffff);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 48.22%);
+	z-index: -1;
+}
+
+.main_block {
+	@extend .Container;
+}
+
+@media (max-width: 1280px) {
+	.Container {
+		max-width: $container_max_widthMedium;
+	}
+
+	.App {
+	}
+}

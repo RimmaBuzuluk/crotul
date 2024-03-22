@@ -1,0 +1,97 @@
+@import '../../App.scss';
+
+.develop {
+	display: flex;
+	margin-top: 228px;
+	margin-bottom: 77px;
+
+	.develop_information {
+		.develop_title {
+			font-size: 72px;
+			font-weight: bold;
+			line-height: 120%;
+			text-transform: uppercase;
+			font-family: $fonts_rubik;
+			margin-top: 38px;
+			margin-bottom: 16px;
+		}
+		.develop_text {
+			font-size: 22px;
+			line-height: 150%;
+		}
+
+		.develop_button {
+			button {
+				background-color: #ee5622;
+				border: none;
+				width: 258px;
+				height: 52px;
+				border-radius: 100px;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				margin-top: 34px;
+				margin-bottom: 16px;
+				.button_text {
+					color: $color_wight;
+					font-weight: bold;
+				}
+			}
+		}
+
+		.develop_rated {
+			display: flex;
+			align-items: center;
+			.develop_rated_text {
+				margin-right: 10px;
+			}
+			.rated-image {
+				width: 24px;
+				height: auto;
+				padding: 2px;
+				margin: 2px;
+				&:not(:last-child) {
+				}
+			}
+		}
+
+		.develop_girle {
+			display: flex;
+			flex-direction: row;
+			margin-top: 6px;
+			margin-bottom: 38px;
+
+			.girl-image {
+				margin-right: -7px;
+				width: 46px;
+				height: auto;
+			}
+			.girl-image:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.develop_video {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 164px;
+		position: relative;
+		.develop_video_img {
+			width: 435px;
+			height: auto;
+		}
+		.circle {
+			width: 80px;
+			height: 80px;
+			background-color: #ffffff;
+			border-radius: 80px;
+			position: absolute;
+		}
+		.develop_video_play {
+			position: absolute;
+			width: 29px;
+			height: auto;
+		}
+	}
+}

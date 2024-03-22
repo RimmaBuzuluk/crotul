@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+.pricing {
+	margin: 79px 0;
+
+	.pricing_title {
+		font-family: $fonts_rubik;
+		font-size: 54px;
+		font-weight: bold;
+	}
+	.pricing_text {
+		line-height: 150%;
+		width: 740px;
+		margin: 60px 0;
+	}
+	.pricing_item {
+		display: flex;
+		justify-content: space-between;
+	}
+}
