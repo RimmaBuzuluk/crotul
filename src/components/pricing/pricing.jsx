@@ -33,16 +33,16 @@ export const Pricing = () => {
 
 	const scrollLeft = () => {
 		if (scrollPosition > 0) {
-			const newPosition = scrollPosition - (314 * screenWidth) / 415; // Змінюйте значення зміщення, якщо потрібно
+			// 382
+			const newPosition = scrollPosition - (314 * screenWidth) / 425;
 			setScrollPosition(newPosition < 0 ? 0 : newPosition);
 			setScrollItem(scrollItem - 1);
 		}
 	};
 
 	const scrollRight = () => {
-		// const maxScroll = Math.max(0, pricing.length * itemWidth - containerWidth);
 		if (scrollItem < pricing.length) {
-			const newPosition = scrollPosition + 314; // Змінюйте значення зміщення, якщо потрібно
+			const newPosition = scrollPosition + (314 * screenWidth) / 425;
 			setScrollPosition(newPosition);
 			setScrollItem(scrollItem + 1);
 		}
