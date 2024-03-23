@@ -3,7 +3,7 @@ import itemImg from '../../img/senior.png';
 import { PricingItem } from '../Pricing_items/pricing_items';
 import ItemArrowLeft from '../../img/iconamoon_arrow-up-2-light.png';
 import ItemArrowRight from '../../img/iconamoon_arrow-up-2-light (1).png';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const Pricing = () => {
 	const pricing = [
@@ -26,13 +26,14 @@ export const Pricing = () => {
 			price: [1, 2],
 		},
 	];
+	const screenWidth = window.innerWidth;
 
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [scrollItem, setScrollItem] = useState(1);
 
 	const scrollLeft = () => {
 		if (scrollPosition > 0) {
-			const newPosition = scrollPosition - 314; // Змінюйте значення зміщення, якщо потрібно
+			const newPosition = scrollPosition - (314 * screenWidth) / 415; // Змінюйте значення зміщення, якщо потрібно
 			setScrollPosition(newPosition < 0 ? 0 : newPosition);
 			setScrollItem(scrollItem - 1);
 		}
@@ -46,7 +47,6 @@ export const Pricing = () => {
 			setScrollItem(scrollItem + 1);
 		}
 	};
-	const screenWidth = window.innerWidth;
 
 	return (
 		<div className='pricing'>
