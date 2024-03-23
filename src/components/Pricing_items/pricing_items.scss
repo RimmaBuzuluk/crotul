@@ -37,6 +37,10 @@
 			margin: 7px 5px;
 		}
 	}
+	@media (max-width: 679px) {
+		width: 100%;
+		// flex-wrap: nowrap;
+	}
 	@media (max-width: 415px) {
 		width: 298px;
 		border: 1px solid #b8babf;

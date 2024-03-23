@@ -79,6 +79,11 @@
 				@media (max-width: 1280px) {
 					width: 248px;
 				}
+				@media (max-width: 720px) {
+					width: 100%;
+					justify-content: center;
+				}
+
 				@media (max-width: 415px) {
 					width: 100%;
 					justify-content: center;
@@ -88,6 +93,9 @@
 				.button_text {
 					color: $color_wight;
 					font-weight: bold;
+					@media (max-width: 720px) {
+						margin-right: 19px;
+					}
 					@media (max-width: 415px) {
 						margin-right: 19px;
 					}
