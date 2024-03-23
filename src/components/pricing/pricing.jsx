@@ -1,8 +1,8 @@
 import './pricing.scss';
 import itemImg from '../../img/senior.png';
 import { PricingItem } from '../Pricing_items/pricing_items';
-import ItemArrowRight from '../../img/iconamoon_arrow-up-2-light.png';
-import ItemArrowLeft from '../../img/iconamoon_arrow-up-2-light (1).png';
+import ItemArrowLeft from '../../img/iconamoon_arrow-up-2-light.png';
+import ItemArrowRight from '../../img/iconamoon_arrow-up-2-light (1).png';
 import { useState } from 'react';
 
 export const Pricing = () => {
@@ -28,16 +28,27 @@ export const Pricing = () => {
 	];
 
 	const [scrollPosition, setScrollPosition] = useState(0);
+	const [scrollItem, setScrollItem] = useState(1);
+	console.log('s', scrollItem);
+	console.log('l', pricing.length);
 
 	const scrollLeft = () => {
-		const newPosition = scrollPosition - 314; // Змінюйте значення зміщення, якщо потрібно
-		setScrollPosition(newPosition < 0 ? 0 : newPosition);
+		if (scrollPosition > 0) {
+			const newPosition = scrollPosition - 314; // Змінюйте значення зміщення, якщо потрібно
+			setScrollPosition(newPosition < 0 ? 0 : newPosition);
+			setScrollItem(scrollItem - 1);
+		}
 	};
 
 	const scrollRight = () => {
-		const newPosition = scrollPosition + 314; // Змінюйте значення зміщення, якщо потрібно
-		setScrollPosition(newPosition);
+		// const maxScroll = Math.max(0, pricing.length * itemWidth - containerWidth);
+		if (scrollItem < pricing.length) {
+			const newPosition = scrollPosition + 314; // Змінюйте значення зміщення, якщо потрібно
+			setScrollPosition(newPosition);
+			setScrollItem(scrollItem + 1);
+		}
 	};
+	const screenWidth = window.innerWidth;
 
 	return (
 		<div className='pricing'>
@@ -57,7 +68,7 @@ export const Pricing = () => {
 				</button>
 			</div>
 			<div className='pricing_item'>
-				<div style={{ display: 'flex', transform: `translateX(-${scrollPosition}px)`, transition: 'transform 0.3s ease' }}>
+				<div className='price_items' style={{ transform: screenWidth < 430 ? `translateX(-${scrollPosition}px)` : 'none', transition: screenWidth < 430 ? `transform 0.3s ease` : 'none' }}>
 					{pricing.map(item => (
 						<PricingItem key={item.id} item={item} />
 					))}

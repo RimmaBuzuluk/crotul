@@ -21,7 +21,6 @@
 		margin: 60px 0;
 		@media (max-width: 770px) {
 			width: 100%;
-			background-color: bisque;
 		}
 		@media (max-width: 415px) {
 			font-size: 14px;
@@ -53,12 +52,21 @@
 
 	.pricing_item {
 		display: flex;
-		justify-content: space-between;
-		// flex-wrap: wrap;
+
 		@media (max-width: 415px) {
-			// transform: rotateX(180deg);
 			overflow-x: hidden;
-			flex-wrap: 'nowrap';
+			flex-wrap: nowrap;
+		}
+		.price_items {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			@media (max-width: 415px) {
+				width: auto;
+				flex-wrap: nowrap;
+			}
 		}
 	}
 }
