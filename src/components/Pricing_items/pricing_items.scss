@@ -1,12 +1,20 @@
+// @import phoneItem from  '../../img/Frame 118.png';
+
 .item {
 	width: 386px;
 	@media (max-width: 1280px) {
 		width: 332px;
 	}
+
 	.item_img {
+		width: 100%;
+		height: auto;
 		img {
 			width: 100%;
 			height: auto;
+			@media (max-width: 415px) {
+				box-shadow: 0 8px 8px rgba(193, 193, 193, 0.5);
+			}
 		}
 	}
 
@@ -19,10 +27,17 @@
 			margin-top: 26px;
 			margin-bottom: 22px;
 		}
+		@media (max-width: 415px) {
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Горизонтальний зсув 2px, вертикальний зсув 2px, розмір тіні 4px, колір чорний, прозорість 50% */
+		}
 	}
 	.item_text {
 		line-height: 150%;
 		margin-bottom: 40px;
+
+		@media (max-width: 415px) {
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Горизонтальний зсув 2px, вертикальний зсув 2px, розмір тіні 4px, колір чорний, прозорість 50% */
+		}
 	}
 	.item_button {
 		display: flex;
@@ -35,6 +50,9 @@
 		}
 		img {
 			margin: 7px 5px;
+		}
+		@media (max-width: 415px) {
+			justify-content: center;
 		}
 	}
 	@media (max-width: 679px) {

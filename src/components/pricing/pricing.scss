@@ -29,6 +29,7 @@
 	.pricing_button {
 		display: flex;
 		justify-content: end;
+		margin-bottom: 24px;
 		@media (min-width: 415px) {
 			display: none;
 		}

@@ -29,8 +29,6 @@ export const Pricing = () => {
 
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [scrollItem, setScrollItem] = useState(1);
-	console.log('s', scrollItem);
-	console.log('l', pricing.length);
 
 	const scrollLeft = () => {
 		if (scrollPosition > 0) {

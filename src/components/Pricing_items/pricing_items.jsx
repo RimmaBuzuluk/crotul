@@ -1,13 +1,15 @@
 import arrowImg from '../../img/clarity_arrow-line.png';
 import './pricing_items.scss';
+import backgroundImg2 from '../../img/senior.png';
+import backgroundImg1 from '../../img/Frame 118.png';
 
 export const PricingItem = ({ item }) => {
-	console.log();
+	const screenWidth = window.innerWidth;
 
 	return (
 		<div className='item'>
 			<div className='item_img'>
-				<img src={item.img} />
+				<img src={screenWidth < 430 ? backgroundImg1 : backgroundImg2} />
 			</div>
 			<div className='item_price'>
 				<b>${item.price[0]}</b> to <b>${item.price[1]}</b> /hour
