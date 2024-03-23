@@ -15,12 +15,19 @@ export const Develop = () => {
 			<div className='develop_information'>
 				<div className='develop_title'>We develop anything what you desire</div>
 				<div className='develop_text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est mi, feugiat id velit vel, pharetra rhoncus tellus. </div>
+				<div className='develop_videoPhone'>
+					<img className='develop_video_imgPhone' src={videoImg} alt='' />
+					<div className='circlePhone'></div>
+					<img className='develop_video_playPhone' src={videoPlayImg} />
+				</div>
+
 				<div className='develop_button'>
 					<button>
 						<div className='button_text'>GET A FREE QUOTE</div>
 						<img src={arrow} />
 					</button>
 				</div>
+
 				<div className='develop_rated'>
 					<div className='develop_rated_text'>Rated</div>
 					{Array.from({ length: starImgCount }, (_, index) => (

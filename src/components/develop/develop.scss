@@ -5,7 +5,26 @@
 	margin-top: 228px;
 	margin-bottom: 77px;
 
+	@media (max-width: 1280px) {
+		margin-top: 185px;
+		margin-bottom: 69px;
+	}
+	@media (max-width: 720px) {
+		margin-top: 100px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	@media (max-width: 415px) {
+		margin-top: 84px;
+		margin-bottom: 0px;
+	}
+	@media (max-width: 375px) {
+		margin-top: 100px;
+	}
 	.develop_information {
+		display: flex;
+		flex-direction: column;
 		.develop_title {
 			font-size: 72px;
 			font-weight: bold;
@@ -14,12 +33,37 @@
 			font-family: $fonts_rubik;
 			margin-top: 38px;
 			margin-bottom: 16px;
+			@media (max-width: 1280px) {
+				font-size: 62px;
+				margin-top: 0px;
+				margin-bottom: 18px;
+			}
+			@media (max-width: 720px) {
+				font-size: 40px;
+				text-align: center;
+			}
+			@media (max-width: 415px) {
+				font-size: 28px;
+				text-align: left;
+				margin-bottom: 16px;
+			}
 		}
 		.develop_text {
 			font-size: 22px;
 			line-height: 150%;
+			@media (max-width: 1280px) {
+				font-size: 18px;
+				padding-right: 116px;
+			}
+			@media (max-width: 720px) {
+				display: flex;
+				align-items: center;
+				padding-right: 0;
+			}
+			@media (max-width: 415px) {
+				margin-bottom: 16px;
+			}
 		}
-
 		.develop_button {
 			button {
 				background-color: #ee5622;
@@ -32,13 +76,52 @@
 				align-items: center;
 				margin-top: 34px;
 				margin-bottom: 16px;
+				@media (max-width: 1280px) {
+					width: 248px;
+				}
+				@media (max-width: 415px) {
+					width: 100%;
+					justify-content: center;
+					margin-top: 15px;
+					margin-bottom: 32pxpx;
+				}
 				.button_text {
 					color: $color_wight;
 					font-weight: bold;
+					@media (max-width: 415px) {
+						margin-right: 19px;
+					}
 				}
 			}
 		}
-
+		.develop_videoPhone {
+			@media (min-width: 415px) {
+				display: none;
+			}
+			@media (max-width: 415px) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: auto;
+				.develop_video_imgPhone {
+					width: 100%;
+					height: auto;
+				}
+				.circlePhone {
+					width: 73.77px;
+					height: 73.77px;
+					background-color: #ffffff;
+					border-radius: 73.77px;
+					position: absolute;
+				}
+				.develop_video_playPhone {
+					position: absolute;
+					width: 29px;
+					height: auto;
+				}
+			}
+		}
 		.develop_rated {
 			display: flex;
 			align-items: center;
@@ -53,8 +136,10 @@
 				&:not(:last-child) {
 				}
 			}
+			@media (max-width: 700px) {
+				display: none;
+			}
 		}
-
 		.develop_girle {
 			display: flex;
 			flex-direction: row;
@@ -69,6 +154,9 @@
 			.girl-image:last-child {
 				margin-right: 0;
 			}
+			@media (max-width: 700px) {
+				display: none;
+			}
 		}
 	}
 	.develop_video {
@@ -77,9 +165,22 @@
 		justify-content: center;
 		margin-left: 164px;
 		position: relative;
+		@media (max-width: 1280px) {
+			margin-left: 97px;
+		}
+		@media (max-width: 700px) {
+			margin-left: 0px;
+		}
 		.develop_video_img {
 			width: 435px;
 			height: auto;
+			@media (max-width: 1280px) {
+				width: 391px;
+				height: auto;
+			}
+			@media (max-width: 1046px) {
+				width: 300px;
+			}
 		}
 		.circle {
 			width: 80px;
@@ -92,6 +193,9 @@
 			position: absolute;
 			width: 29px;
 			height: auto;
+		}
+		@media (max-width: 415px) {
+			display: none;
 		}
 	}
 }

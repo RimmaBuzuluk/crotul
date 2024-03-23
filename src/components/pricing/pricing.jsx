@@ -1,6 +1,9 @@
 import './pricing.scss';
 import itemImg from '../../img/senior.png';
 import { PricingItem } from '../Pricing_items/pricing_items';
+import ItemArrowRight from '../../img/iconamoon_arrow-up-2-light.png';
+import ItemArrowLeft from '../../img/iconamoon_arrow-up-2-light (1).png';
+import { useState } from 'react';
 
 export const Pricing = () => {
 	const pricing = [
@@ -23,6 +26,19 @@ export const Pricing = () => {
 			price: [1, 2],
 		},
 	];
+
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	const scrollLeft = () => {
+		const newPosition = scrollPosition - 314; // Змінюйте значення зміщення, якщо потрібно
+		setScrollPosition(newPosition < 0 ? 0 : newPosition);
+	};
+
+	const scrollRight = () => {
+		const newPosition = scrollPosition + 314; // Змінюйте значення зміщення, якщо потрібно
+		setScrollPosition(newPosition);
+	};
+
 	return (
 		<div className='pricing'>
 			<div className='pricing_title'>PRICING</div>
@@ -31,10 +47,21 @@ export const Pricing = () => {
 				<br /> Telemarketing provides a direct channel of communication with potential clients, allowing financial advisors to answer questions, address concerns, and cultivate trust.
 				<br /> When it comes to financial services—be it insurance, wealth management, or lending—nothing can replace the personal touch.
 			</div>
+
+			<div className='pricing_button'>
+				<button onClick={scrollLeft}>
+					<img src={ItemArrowLeft} />
+				</button>
+				<button onClick={scrollRight}>
+					<img src={ItemArrowRight} />
+				</button>
+			</div>
 			<div className='pricing_item'>
-				{pricing.map(item => (
-					<PricingItem item={item} />
-				))}
+				<div style={{ display: 'flex', transform: `translateX(-${scrollPosition}px)`, transition: 'transform 0.3s ease' }}>
+					{pricing.map(item => (
+						<PricingItem key={item.id} item={item} />
+					))}
+				</div>
 			</div>
 		</div>
 	);

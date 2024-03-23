@@ -43,7 +43,21 @@ $container_max_widthPhoneSmole: 343px;
 	.Container {
 		max-width: $container_max_widthMedium;
 	}
-
 	.App {
+		// background-color: #f2906e;
+	}
+}
+
+@media (max-width: 415px) {
+	.Container {
+		max-width: $container_max_widthPhone;
+	}
+	.App {
+	}
+}
+
+@media (max-width: 375px) {
+	.Container {
+		max-width: $container_max_widthPhoneSmole;
 	}
 }
