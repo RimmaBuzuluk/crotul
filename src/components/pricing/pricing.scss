@@ -6,6 +6,9 @@
 	@media (max-width: 1280px) {
 		margin: 86px 0 78px 0;
 	}
+	@media (max-width: 415px) {
+		margin: 30px 0;
+	}
 
 	.pricing_title {
 		font-family: $fonts_rubik;
@@ -24,6 +27,7 @@
 		}
 		@media (max-width: 415px) {
 			font-size: 14px;
+			margin: 30px 0;
 		}
 	}
 	.pricing_button {
