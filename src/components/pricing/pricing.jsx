@@ -31,10 +31,24 @@ export const Pricing = () => {
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [scrollItem, setScrollItem] = useState(1);
 
+	let k;
+	if (screenWidth > 375) {
+		k = 390;
+	} else if (screenWidth <= 375 && screenWidth >= 340) {
+		k = 420;
+	} else if (screenWidth <= 290 && screenWidth >= 285) {
+		k = 325;
+	} else if (screenWidth <= 399 && screenWidth >= 315) {
+		k = 380;
+	} else {
+		k = 345;
+	}
+	console.log(k);
+
 	const scrollLeft = () => {
 		if (scrollPosition > 0) {
 			// 382
-			const newPosition = scrollPosition - (314 * screenWidth) / 425;
+			const newPosition = scrollPosition - (314 * screenWidth) / k;
 			setScrollPosition(newPosition < 0 ? 0 : newPosition);
 			setScrollItem(scrollItem - 1);
 		}
@@ -42,7 +56,8 @@ export const Pricing = () => {
 
 	const scrollRight = () => {
 		if (scrollItem < pricing.length) {
-			const newPosition = scrollPosition + (314 * screenWidth) / 425;
+			console.log(scrollItem);
+			const newPosition = scrollPosition + (314 * screenWidth) / k;
 			setScrollPosition(newPosition);
 			setScrollItem(scrollItem + 1);
 		}
