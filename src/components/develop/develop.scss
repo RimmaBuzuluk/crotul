@@ -76,6 +76,14 @@
 				align-items: center;
 				margin-top: 34px;
 				margin-bottom: 16px;
+				&:hover {
+					background-color: #dc5629;
+				}
+				&:active {
+					background-color: #dc5629;
+					box-shadow: 0 5px #571109;
+					transform: translateY(4px);
+				}
 				@media (max-width: 1280px) {
 					width: 248px;
 				}

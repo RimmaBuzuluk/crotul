@@ -44,6 +44,7 @@
 		justify-content: end;
 		align-items: center;
 		padding: 0 32px;
+
 		.item_button_text {
 			font-weight: bold;
 			margin-right: 10px;
@@ -51,6 +52,7 @@
 		img {
 			margin: 7px 5px;
 		}
+
 		@media (max-width: 415px) {
 			justify-content: center;
 		}
